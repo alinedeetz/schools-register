@@ -17,9 +17,5 @@ Run the following command:
 
 ### PostgreSQL 
 
-You have to connect a PostgreSQL database for this application to work. 
-
-Run the following command on the database: 
-
->$ CREATE TABLE schools (school_id INT GENERATED ALWAYS AS IDENTITY, school_name TEXT, principal_name TEXT, school_address TEXT, students TEXT)
+You have to connect a PostgreSQL database for this application to work and then execute the "ddl.sql" script on it.
 

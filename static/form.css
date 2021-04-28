@@ -1,0 +1,21 @@
+#page-container {
+    color: rgb(0, 0, 0);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+
+h1 {
+    color: #000000;
+}
+
+input {
+    width: 100%;
+}
+
+input[type=submit] {
+    width: 50%;
+    margin-left: 6cm;
+    margin-right: 5cm;
+
+}

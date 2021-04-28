@@ -1,0 +1,77 @@
+h3 {
+    text-align: center;
+    font-family:sans-serif;
+    color: rgb(177, 177, 218);
+
+}
+table, th, td {
+    /* border: 1px solid rgb(0, 0, 0); */
+    border-collapse: collapse;
+    border-spacing: 0,2cm;
+    text-align: center;
+}
+
+td {
+    text-align: center;
+}
+
+th {
+    padding: 20px
+}
+
+td {
+    padding: 10px;
+}
+a {
+    align-items: center;
+    background-color: #cdd9fc; /* Green */
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+tr:hover {background-color: #d2dce0;}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#add {
+    align-items: center;
+    background-color: #cdd9fc; 
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 1cm;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type=submit] {
+    align-items: center;
+    background-color: #cdd9fc; 
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 14px;
+    margin-left: 11cm;
+    margin-right: 5cm;
+}
+
+input[type=text] {
+    width: 100%;
+    margin-bottom: 1cm;
+}

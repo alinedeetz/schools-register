@@ -14,3 +14,12 @@ In order to run this container you'll need docker installed.
 Run the following command:
 
 >$ docker run -e SCHOOLS_REGISTER_DB_USERNAME="username" -e SCHOOLS_REGISTER_DB_PASSWORD="password" -e SCHOOLS_REGISTER_DB_HOSTNAME="hostname" -e SCHOOLS_REGISTER_DB_PORT="port" -e SCHOOLS_REGISTER_DB_NAME="database-name" --rm -p 5000:5000 alineem/schools_register
+
+### PostgreSQL 
+
+You have to connect a PostgreSQL database for this application to work. 
+
+Run the following command on the database: 
+
+>$ CREATE TABLE schools (school_id INT GENERATED ALWAYS AS IDENTITY, school_name TEXT, principal_name TEXT, school_address TEXT, students TEXT)
+

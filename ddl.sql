@@ -1,0 +1,1 @@
+CREATE TABLE schools (school_id INT GENERATED ALWAYS AS IDENTITY, school_name TEXT, principal_name TEXT, school_address TEXT, students TEXT)

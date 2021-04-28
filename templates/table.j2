@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Super Ensino</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="/static/css/simple-sidebar.css" rel="stylesheet">
+  <link rel="stylesheet" href="../static/table.css" />
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">Super Ensino</div>
+      <div class="list-group list-group-flush">
+        <a href="/results" class="list-group-item list-group-item-action bg-light">Lista de escolas</a>
+        <a href="/add" class="list-group-item list-group-item-action bg-light">Adicionar escola</a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle">Menu</button>
+      </nav>
+
+      <div class="container-fluid">
+        <h1 class="mt-4">Escolas - Super Ensino</h1>
+        <table id="schoolTable" class="table">
+              <thead class="thead-light">
+              <tr>
+                  <th>Id</th>
+                  <th>Escola</th>
+                  <th>Diretor</th>
+                  <th>Endereço</th>
+                  <th>Número de alunos</th>
+                  <th>Alterar</th>
+                  <th>Excluir</th>
+              </tr>
+              </thead>
+              <tbody>
+              {% for result in data %}
+              <tr>
+                  <td>{{ result[0] }}</td>
+                  <td id="school_name">{{ result[1] }}</td>
+                  <td>{{ result[2] }}</td>
+                  <td>{{ result[3] }}</td>
+                  <td>{{ result[4] }}</td>
+                  <div class = "edit">
+                  <td><a class="edit" href="/edit/{{ result[0] }}">Editar</a></td>
+                  </div>
+                  <td><a class="delete" href="/delete/{{ result[0] }}">Excluir</a></td>
+              </tr>
+          {% endfor %}
+          </tbody>
+      </table>
+          <br>
+    <form method="get" action="/search" id="search">
+        <div class="form__fieldset">
+            <label for ="school_search" class="form__label">Buscar escola:</label>
+            <input type="text" name="school_search" id = "school_search" class = "form__input" placeholder="">
+        </div>
+        <div class ="form__fieldset">
+        <input class="form__submit form__input" type="submit" value="Buscar">
+        </div>
+    </form>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/static/vendor/jquery/jquery.min.js"></script>
+  <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+</body>
+
+</html>

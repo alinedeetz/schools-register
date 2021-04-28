@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Super Ensino</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="/static/css/simple-sidebar.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/edit.css" />
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">Super Ensino</div>
+      <div class="list-group list-group-flush">
+        <a href="/results" class="list-group-item list-group-item-action bg-light">Lista de escolas</a>
+        <a href="/add" class="list-group-item list-group-item-action bg-light">Adicionar escola</a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle">Menu</button>
+      </nav>
+
+      <div class="container-fluid">
+        <h1 class="mt-4">Editar cadastro</h1>
+        <form action="http://localhost:5000/" method="POST" id="form">
+        <div class="form__fieldset">
+            <label for ="school_name" class="form__label">Nome da escola:</label>
+            <input type="text" name="school_name" id = "school_name" class = "form__input" value="{{ data[1] }}">
+        </div>
+        <br>
+        <div class="form__fieldset">
+                <label for ="principal_name" class="form__label">Diretor da escola:</label>
+                <input type="word" name="principal_name" id = "principal_name" class = "form__input" value="{{ data[2] }}">
+        </div>
+        <br>
+        <div class="form__fieldset">
+            <label for ="school_address" class="form__label">Endereço:</label>
+            <input type="word" name="school_address" id = "school_address" class = "form__input" value="{{ data[3] }}">
+        </div>
+        <br>
+        <div class="form__fieldset">
+            <label for ="students" class="form__label">Número de alunos:</label>
+            <input type="word" name="students" id = "students" class = "form__input" value="{{ data[4] }}">
+        </div>
+        <br>
+        <div class ="form__fieldset">
+        <input class="form__submit form__input" type="submit" value="Submit">
+            </div>
+        </form>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/static/vendor/jquery/jquery.min.js"></script>
+  <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+</body>
+
+</html>

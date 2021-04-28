@@ -2,6 +2,7 @@ from flask import Flask, render_template, redirect, request
 import psycopg2
 import os
 
+
 app = Flask(__name__)
 schools_register = []
 DB_USERNAME = os.environ["SCHOOLS_REGISTER_DB_USERNAME"]
